@@ -554,9 +554,9 @@
                 <label>Last item ID</label>
                 <input type="number" id="lastIdInput" min="0" value="20" step="1">
             </div>
-            <button id="importBtn" class="export-btn"> Импорт inventory.txt</button>
+            <button id="importBtn" class="export-btn"> Import inventory.txt</button>
             <input type="file" id="importInput" accept=".txt,text/plain" class="hidden" />
-            <button id="exportBtn" class="export-btn primary" disabled> Экспорт в inventory.txt</button>
+            <button id="exportBtn" class="export-btn primary" disabled> Export in inventory.txt</button>
         </div>
     </div>
 </div>
@@ -764,14 +764,14 @@
             }
             if (type === 'agent') {
                 const found = agents.find(a => a.id === id);
-                return found ? found.name : (fallback || `Агент #${id}`);
+                return found ? found.name : (fallback || `Agent #${id}`);
             }
             if (type === 'gloves') {
                 const found = gloves.find(g => g.id === id);
-                return found ? found.name : (fallback || `Перчатки #${id}`);
+                return found ? found.name : (fallback || `Gloves #${id}`);
             }
             const found = weapons.find(w => w.id === id);
-            return found ? found.name : (fallback || `Предмет #${id}`);
+            return found ? found.name : (fallback || `Item #${id}`);
         }
 
         function detectItemType(defIndex, hasAttributes, hasEquippedState) {
